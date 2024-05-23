@@ -17,6 +17,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "node_modules/"
+              ]
+            },
             "outputPath": "dist/frango-frontend",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -33,6 +38,9 @@
               "src/styles.scss"
             ],
             "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": ["node_modules/"]
+            },
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
@@ -97,10 +105,16 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": ["node_modules/"]
+            }
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "c5f8aa0e-f661-4c9b-b427-8f41cc7c3cb1"
   }
 }

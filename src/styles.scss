@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+@import "variables.scss";
+@import "custom-theme.scss";
+
+html,
+body {
+  height: 100%;
+  background-color: $background;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: $primary;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px $background, 0 0 0 4px $primary;
+  }
+}
+
+.card {
+  background-color: $card;
+  color: $card-foreground;
+  border: 1.5px solid $border;
+  border-radius: $radius;
+}

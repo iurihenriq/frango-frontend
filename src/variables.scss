@@ -1,0 +1,61 @@
+/* Tema Claro */
+
+  $background: hsl(0, 0%, 97.65%);
+  $background-foreground: hsl(0, 0%, 12.55%);
+
+  $muted: hsl(0, 0%, 93.73%);
+  $muted-foreground: hsl(0, 0%, 39.22%);
+
+  $modal: hsl(0, 0%, 98.82%);
+  $modal-foreground: hsl(0, 0%, 12.55%);
+
+  $card: hsl(0, 0%, 98.82%);
+  $card-foreground: hsl(0, 0%, 12.55%);
+
+  $border: hsl(0, 0%, 84.71%);
+
+  $primary: hsl(22.93, 92.59%, 52.35%);
+  $primary-foreground: hsl(44, 0%, 100%);
+
+  $secondary: hsl(34.05, 100%, 85.49%);
+  $secondary-foreground: hsl(16.27, 50.43%, 22.94%);
+
+  $accent: hsl(0, 0%, 90.98%);
+  $accent-foreground: hsl(0, 0%, 12.55%);
+
+  $warn: hsl(10.16, 77.87%, 53.92%);
+  $warn-foreground: hsl(0, 0%, 100%);
+
+  $radius: 0.5rem;
+
+
+/* Tema Escuro */
+// ::root.theme-dark {
+//   $background: hsl(0, 0%, 6.67%);
+//   $background-foreground: hsl(0, 0%, 93.33%);
+
+//   $muted: hsl(0, 0%, 13.33%);
+//   $muted-foreground: hsl(0, 0%, 70.59%);
+
+//   $modal: hsl(0, 0%, 9.8%);
+//   $modal-foreground: hsl(0, 0%, 93.33%);
+
+//   $card: hsl(0, 0%, 9.8%);
+//   $card-foreground: hsl(0, 0%, 93.33%);
+
+//   $border: hsl(44, 14%, 11%);
+
+//   $primary: hsl(22.93, 92.59%, 52.35%);
+//   $primary-foreground: hsl(29.51, 0%, 100%);
+
+//   $secondary: hsl(28.5, 64.52%, 12.16%);
+//   $secondary-foreground: hsl(29.51, 100%, 88.04%);
+
+//   $accent: hsl(0, 0%, 16.47%);
+//   $accent-foreground: hsl(0, 0%, 93.33%);
+
+//   $warn: hsl(10.16, 77.87%, 53.92%);
+//   $warn-foreground: hsl(0, 0%, 100%);
+
+//   $ring: hsl(23.11, 59.8%, 40%);
+// }
