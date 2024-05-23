@@ -1,13 +1,14 @@
-<button mat-flat-button color="accent">Primary</button>
+<button mat-flat-button color="primary" (click)="toggle()">Altera tema</button>
+<button mat-flat-button color="accent">secundario</button>
+<button mat-flat-button color="warn">warn</button>
 <div class="card">
   chat 1\
   <mat-form-field class="changed-input" appearance="outline">
-  <input matInput>
-</mat-form-field>
+    <input matInput>
+  </mat-form-field>
 </div>
 <div class="card">
-  chat 2
-  <mat-slide-toggle [(ngModel)]="isChecked">Slide Toggle Checked: {{isChecked}}</mat-slide-toggle>
+  {{themeService.currentTheme()}}
 </div>
 <a href="http:/youtube.com.br">LINK TESTE</a>
 

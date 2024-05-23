@@ -1,115 +1,157 @@
 @use "@angular/material" as mat;
-@import "variables.scss";
+@import "variables";
 
 @include mat.core();
 
-$light-primary: (
-  50: $primary,
-  100: $primary,
-  200: $primary,
-  300: $primary,
-  400: $primary,
-  500: $primary,
-  600: $primary,
-  700: $primary,
-  800: $primary,
-  900: $primary,
-  A100: $primary,
-  A200: $primary,
-  A400: $primary,
-  A700: $primary,
+@mixin lighten() {
+  --background: #{$light-background};
+  --background-foreground: #{$light-background-foreground};
+  --muted: #{$light-muted};
+  --muted-foreground: #{$light-muted-foreground};
+  --modal: #{$light-modal};
+  --modal-foreground: #{$light-modal-foreground};
+  --card: #{$light-card};
+  --card-foreground: #{$light-card-foreground};
+  --border: #{$light-border};
+  --primary: #{$light-primary};
+  --primary-foreground: #{$light-primary-foreground};
+  --secondary: #{$light-secondary};
+  --secondary-foreground: #{$light-secondary-foreground};
+  --accent: #{$light-accent};
+  --accent-foreground: #{$light-accent-foreground};
+  --warn: #{$light-warn};
+  --warn-foreground: #{$light-warn-foreground};
+  --radius: #{$light-radius};
+}
+
+@mixin darken() {
+  --background: #{$dark-background};
+  --background-foreground: #{$dark-background-foreground};
+  --muted: #{$dark-muted};
+  --muted-foreground: #{$dark-muted-foreground};
+  --modal: #{$dark-modal};
+  --modal-foreground: #{$dark-modal-foreground};
+  --card: #{$dark-card};
+  --card-foreground: #{$dark-card-foreground};
+  --border: #{$dark-border};
+  --primary: #{$dark-primary};
+  --primary-foreground: #{$dark-primary-foreground};
+  --secondary: #{$dark-secondary};
+  --secondary-foreground: #{$dark-secondary-foreground};
+  --accent: #{$dark-accent};
+  --accent-foreground: #{$dark-accent-foreground};
+  --warn: #{$dark-warn};
+  --warn-foreground: #{$dark-warn-foreground};
+  --radius: #{$dark-radius};
+}
+
+$custom-primary: (
+  50: var(--primary),
+  100: var(--primary),
+  200: var(--primary),
+  300: var(--primary),
+  400: var(--primary),
+  500: var(--primary),
+  600: var(--primary),
+  700: var(--primary),
+  800: var(--primary),
+  900: var(--primary),
+  A100: var(--primary),
+  A200: var(--primary),
+  A400: var(--primary),
+  A700: var(--primary),
   contrast: (
-    50: $primary-foreground,
-    100: $primary-foreground,
-    200: $primary-foreground,
-    300: $primary-foreground,
-    400: $primary-foreground,
-    500: $primary-foreground,
-    600: $primary-foreground,
-    700: $primary-foreground,
-    800: $primary-foreground,
-    900: $primary-foreground,
-    A100: $primary-foreground,
-    A200: $primary-foreground,
-    A400: $primary-foreground,
-    A700: $primary-foreground,
+    50: var(--primary-foreground),
+    100: var(--primary-foreground),
+    200: var(--primary-foreground),
+    300: var(--primary-foreground),
+    400: var(--primary-foreground),
+    500: var(--primary-foreground),
+    600: var(--primary-foreground),
+    700: var(--primary-foreground),
+    800: var(--primary-foreground),
+    900: var(--primary-foreground),
+    A100: var(--primary-foreground),
+    A200: var(--primary-foreground),
+    A400: var(--primary-foreground),
+    A700: var(--primary-foreground),
   ),
 );
 
-$light-accent: (
-  50: $accent,
-  100: $accent,
-  200: $accent,
-  300: $accent,
-  400: $accent,
-  500: $accent,
-  600: $accent,
-  700: $accent,
-  800: $accent,
-  900: $accent,
-  A100: $accent,
-  A200: $accent,
-  A400: $accent,
-  A700: $accent,
+$custom-accent: (
+  50: var(--accent),
+  100: var(--accent),
+  200: var(--accent),
+  300: var(--accent),
+  400: var(--accent),
+  500: var(--accent),
+  600: var(--accent),
+  700: var(--accent),
+  800: var(--accent),
+  900: var(--accent),
+  A100: var(--accent),
+  A200: var(--accent),
+  A400: var(--accent),
+  A700: var(--accent),
   contrast: (
-    50: $accent-foreground,
-    100: $accent-foreground,
-    200: $accent-foreground,
-    300: $accent-foreground,
-    400: $accent-foreground,
-    500: $accent-foreground,
-    600: $accent-foreground,
-    700: $accent-foreground,
-    800: $accent-foreground,
-    900: $accent-foreground,
-    A100: $accent-foreground,
-    A200: $accent-foreground,
-    A400: $accent-foreground,
-    A700: $accent-foreground,
+    50: var(--accent-foreground),
+    100: var(--accent-foreground),
+    200: var(--accent-foreground),
+    300: var(--accent-foreground),
+    400: var(--accent-foreground),
+    500: var(--accent-foreground),
+    600: var(--accent-foreground),
+    700: var(--accent-foreground),
+    800: var(--accent-foreground),
+    900: var(--accent-foreground),
+    A100: var(--accent-foreground),
+    A200: var(--accent-foreground),
+    A400: var(--accent-foreground),
+    A700: var(--accent-foreground),
   ),
 );
 
-$light-warn: (
-  50: $warn,
-  100: $warn,
-  200: $warn,
-  300: $warn,
-  400: $warn,
-  500: $warn,
-  600: $warn,
-  700: $warn,
-  800: $warn,
-  900: $warn,
-  A100: $warn,
-  A200: $warn,
-  A400: $warn,
-  A700: $warn,
+$custom-warn: (
+  50: var(--warn),
+  100: var(--warn),
+  200: var(--warn),
+  300: var(--warn),
+  400: var(--warn),
+  500: var(--warn),
+  600: var(--warn),
+  700: var(--warn),
+  800: var(--warn),
+  900: var(--warn),
+  A100: var(--warn),
+  A200: var(--warn),
+  A400: var(--warn),
+  A700: var(--warn),
   contrast: (
-    50: $warn-foreground,
-    100: $warn-foreground,
-    200: $warn-foreground,
-    300: $warn-foreground,
-    400: $warn-foreground,
-    500: $warn-foreground,
-    600: $warn-foreground,
-    700: $warn-foreground,
-    800: $warn-foreground,
-    900: $warn-foreground,
-    A100: $warn-foreground,
-    A200: $warn-foreground,
-    A400: $warn-foreground,
-    A700: $warn-foreground,
+    50: var(--warn-foreground),
+    100: var(--warn-foreground),
+    200: var(--warn-foreground),
+    300: var(--warn-foreground),
+    400: var(--warn-foreground),
+    500: var(--warn-foreground),
+    600: var(--warn-foreground),
+    700: var(--warn-foreground),
+    800: var(--warn-foreground),
+    900: var(--warn-foreground),
+    A100: var(--warn-foreground),
+    A200: var(--warn-foreground),
+    A400: var(--warn-foreground),
+    A700: var(--warn-foreground),
   ),
 );
 
 $light-theme: mat.define-light-theme(
   (
     color: (
-      primary: mat.define-palette($light-primary),
-      accent: mat.define-palette($light-accent),
-      warn: mat.define-palette($light-warn),
-      background: base-palette($background),
-      foreground: base-palette($background-foreground),
+      primary: mat.define-palette($custom-primary),
+      accent: mat.define-palette($custom-accent),
+      warn: mat.define-palette($custom-warn),
+      background: base-palette(var(--background)),
+      foreground: base-palette(var(--background-foreground)),
     ),
     typography: mat.define-typography-config(),
     density: 0,

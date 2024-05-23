@@ -1,29 +1,36 @@
-@import "variables.scss";
-@import "custom-theme.scss";
+@import "variables";
+@import "custom-theme";
 
 html,
 body {
   height: 100%;
-  background-color: $background;
+  background-color: var(--background);
 }
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+body.dark {
+  @include darken();
+}
+body.light {
+  @include lighten();
+}
+
 a {
   text-decoration: none;
-  color: $primary;
+  color: var(--primary);
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 2px $background, 0 0 0 4px $primary;
+    box-shadow: 0 0 0 2px var(--background), 0 0 0 4px var(--primary);
   }
 }
 
 .card {
-  background-color: $card;
-  color: $card-foreground;
-  border: 1.5px solid $border;
-  border-radius: $radius;
+  background-color: var(--card);
+  color: var(--card-foreground);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
 }
