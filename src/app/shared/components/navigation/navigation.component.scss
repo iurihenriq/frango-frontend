@@ -1,0 +1,11 @@
+.sidenav-container {
+  height: 100%;
+  .sidenav-menu {
+    background-color: var(--card);
+    color: var(--card-foreground);
+    border-right: 1.5px solid var(--border);
+  }
+  .sidenav-content {
+    background-color: var(--background);
+  }
+}
